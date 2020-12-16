@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH -N 1  # number of nodes
-#SBATCH --ntasks-per-node=28  # number of cores
+#SBATCH --ntasks-per-node=1  # number of cores
 #SBATCH -t 05:00:00   # time in hh:mm:ss
 #SBATCH -p RM       # partition
 #SBATCH -o %j.out # file to save job's STDOUT (%j = JobId)
