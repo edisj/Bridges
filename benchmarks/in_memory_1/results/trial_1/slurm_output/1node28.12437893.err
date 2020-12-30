@@ -1,0 +1,52 @@
++ module load anaconda3/5.2.0
+++ /usr/bin/modulecmd bash load anaconda3/5.2.0
++ eval 'JUPYTER_RUNTIME_DIR=~/jupyter_runtime_dir' ';export' 'JUPYTER_RUNTIME_DIR;'
+++ JUPYTER_RUNTIME_DIR=/home/edisj/jupyter_runtime_dir
+++ export JUPYTER_RUNTIME_DIR
++ module load phdf5/1.10.2_gnu_openmpi
+++ /usr/bin/modulecmd bash load phdf5/1.10.2_gnu_openmpi
++ eval
++ source activate MDA
+++ _CONDA_ROOT=/opt/packages/anaconda/anaconda3-5.2.0
+++ . /opt/packages/anaconda/anaconda3-5.2.0/etc/profile.d/conda.sh
++++ _CONDA_EXE=/opt/packages/anaconda/anaconda3-5.2.0/bin/conda
++++ _CONDA_ROOT=/opt/packages/anaconda/anaconda3-5.2.0
++++ _conda_set_vars
++++ '[' -n x ']'
++++ _CONDA_SHELL_FLAVOR=bash
++++ '[' -z x ']'
++++ '[' -z '' ']'
++++ PS1=
++++ '[' -z x ']'
+++ _conda_activate MDA
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1=
++++ /opt/packages/anaconda/anaconda3-5.2.0/bin/conda shell.posix activate MDA
+++ ask_conda='PS1='\''(MDA) '\''
+\export CONDA_PROMPT_MODIFIER='\''(MDA) '\''
+\export CONDA_SHLVL='\''1'\''
+\export PATH='\''/home/edisj/.conda/envs/MDA/bin:/opt/packages/phdf5/gnu_openmpi/1.10.2/bin:/usr/mpi/gcc/openmpi-2.1.2-hfi/bin:/opt/packages/anaconda/anaconda3-5.2.0/bin:/usr/lib64/qt-3.3/bin:/opt/packages/xdusage/2.1-1/bin:/opt/packages/slurm/default/bin:/opt/packages/allocations:/opt/packages/interact/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/puppet/bin:/bin:/sbin:/opt/puppetlabs/bin:/home/edisj/.local/bin:/home/edisj/bin'\'''
+++ eval 'PS1='\''(MDA) '\''
+\export CONDA_PROMPT_MODIFIER='\''(MDA) '\''
+\export CONDA_SHLVL='\''1'\''
+\export PATH='\''/home/edisj/.conda/envs/MDA/bin:/opt/packages/phdf5/gnu_openmpi/1.10.2/bin:/usr/mpi/gcc/openmpi-2.1.2-hfi/bin:/opt/packages/anaconda/anaconda3-5.2.0/bin:/usr/lib64/qt-3.3/bin:/opt/packages/xdusage/2.1-1/bin:/opt/packages/slurm/default/bin:/opt/packages/allocations:/opt/packages/interact/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/puppet/bin:/bin:/sbin:/opt/puppetlabs/bin:/home/edisj/.local/bin:/home/edisj/bin'\'''
++++ PS1='(MDA) '
++++ export 'CONDA_PROMPT_MODIFIER=(MDA) '
++++ CONDA_PROMPT_MODIFIER='(MDA) '
++++ export CONDA_SHLVL=1
++++ CONDA_SHLVL=1
++++ export PATH=/home/edisj/.conda/envs/MDA/bin:/opt/packages/phdf5/gnu_openmpi/1.10.2/bin:/usr/mpi/gcc/openmpi-2.1.2-hfi/bin:/opt/packages/anaconda/anaconda3-5.2.0/bin:/usr/lib64/qt-3.3/bin:/opt/packages/xdusage/2.1-1/bin:/opt/packages/slurm/default/bin:/opt/packages/allocations:/opt/packages/interact/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/puppet/bin:/bin:/sbin:/opt/puppetlabs/bin:/home/edisj/.local/bin:/home/edisj/bin
++++ PATH=/home/edisj/.conda/envs/MDA/bin:/opt/packages/phdf5/gnu_openmpi/1.10.2/bin:/usr/mpi/gcc/openmpi-2.1.2-hfi/bin:/opt/packages/anaconda/anaconda3-5.2.0/bin:/usr/lib64/qt-3.3/bin:/opt/packages/xdusage/2.1-1/bin:/opt/packages/slurm/default/bin:/opt/packages/allocations:/opt/packages/interact/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/puppet/bin:/bin:/sbin:/opt/puppetlabs/bin:/home/edisj/.local/bin:/home/edisj/bin
+++ _conda_hashr
+++ case "$_CONDA_SHELL_FLAVOR" in
+++ hash -r
++ testdir=/pylon5/mc4sb2p/edisj/Bridges/temp/12437865
++ export OMP_NUM_THREADS=1
++ OMP_NUM_THREADS=1
++ mpiexec -n 28 python -W ignore /pylon5/mc4sb2p/edisj/Bridges/benchmarks/in_memory_1/scripts/benchmark.py /pylon5/mc4sb2p/edisj/Bridges/temp/12437865/YiiP_system.pdb /pylon5/mc4sb2p/edisj/Bridges/temp/12437865/YiiP_system_9ns_center100x.h5md trial_1/1node_1
+
+real	7m17.617s
+user	19m9.641s
+sys	9m22.202s
++ rm -r /pylon5/mc4sb2p/edisj/Bridges/temp/12437865

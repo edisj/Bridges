@@ -1,0 +1,99 @@
++ module load anaconda3/5.2.0
+++ /usr/bin/modulecmd bash load anaconda3/5.2.0
++ eval 'JUPYTER_RUNTIME_DIR=~/jupyter_runtime_dir' ';export' 'JUPYTER_RUNTIME_DIR;'
+++ JUPYTER_RUNTIME_DIR=/home/edisj/jupyter_runtime_dir
+++ export JUPYTER_RUNTIME_DIR
++ module load phdf5/1.10.2_gnu_openmpi
+++ /usr/bin/modulecmd bash load phdf5/1.10.2_gnu_openmpi
++ eval
++ source activate MDA
+++ _CONDA_ROOT=/opt/packages/anaconda/anaconda3-5.2.0
+++ . /opt/packages/anaconda/anaconda3-5.2.0/etc/profile.d/conda.sh
++++ _CONDA_EXE=/opt/packages/anaconda/anaconda3-5.2.0/bin/conda
++++ _CONDA_ROOT=/opt/packages/anaconda/anaconda3-5.2.0
++++ _conda_set_vars
++++ '[' -n x ']'
++++ _CONDA_SHELL_FLAVOR=bash
++++ '[' -z x ']'
++++ '[' -z '' ']'
++++ PS1=
++++ '[' -z x ']'
+++ _conda_activate MDA
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1=
++++ /opt/packages/anaconda/anaconda3-5.2.0/bin/conda shell.posix activate MDA
+++ ask_conda='PS1='\''(MDA) '\''
+\export CONDA_PROMPT_MODIFIER='\''(MDA) '\''
+\export CONDA_SHLVL='\''1'\''
+\export PATH='\''/home/edisj/.conda/envs/MDA/bin:/opt/packages/phdf5/gnu_openmpi/1.10.2/bin:/usr/mpi/gcc/openmpi-2.1.2-hfi/bin:/opt/packages/anaconda/anaconda3-5.2.0/bin:/usr/lib64/qt-3.3/bin:/opt/packages/xdusage/2.1-1/bin:/opt/packages/slurm/default/bin:/opt/packages/allocations:/opt/packages/interact/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/puppet/bin:/bin:/sbin:/opt/puppetlabs/bin:/home/edisj/.local/bin:/home/edisj/bin'\'''
+++ eval 'PS1='\''(MDA) '\''
+\export CONDA_PROMPT_MODIFIER='\''(MDA) '\''
+\export CONDA_SHLVL='\''1'\''
+\export PATH='\''/home/edisj/.conda/envs/MDA/bin:/opt/packages/phdf5/gnu_openmpi/1.10.2/bin:/usr/mpi/gcc/openmpi-2.1.2-hfi/bin:/opt/packages/anaconda/anaconda3-5.2.0/bin:/usr/lib64/qt-3.3/bin:/opt/packages/xdusage/2.1-1/bin:/opt/packages/slurm/default/bin:/opt/packages/allocations:/opt/packages/interact/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/puppet/bin:/bin:/sbin:/opt/puppetlabs/bin:/home/edisj/.local/bin:/home/edisj/bin'\'''
++++ PS1='(MDA) '
++++ export 'CONDA_PROMPT_MODIFIER=(MDA) '
++++ CONDA_PROMPT_MODIFIER='(MDA) '
++++ export CONDA_SHLVL=1
++++ CONDA_SHLVL=1
++++ export PATH=/home/edisj/.conda/envs/MDA/bin:/opt/packages/phdf5/gnu_openmpi/1.10.2/bin:/usr/mpi/gcc/openmpi-2.1.2-hfi/bin:/opt/packages/anaconda/anaconda3-5.2.0/bin:/usr/lib64/qt-3.3/bin:/opt/packages/xdusage/2.1-1/bin:/opt/packages/slurm/default/bin:/opt/packages/allocations:/opt/packages/interact/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/puppet/bin:/bin:/sbin:/opt/puppetlabs/bin:/home/edisj/.local/bin:/home/edisj/bin
++++ PATH=/home/edisj/.conda/envs/MDA/bin:/opt/packages/phdf5/gnu_openmpi/1.10.2/bin:/usr/mpi/gcc/openmpi-2.1.2-hfi/bin:/opt/packages/anaconda/anaconda3-5.2.0/bin:/usr/lib64/qt-3.3/bin:/opt/packages/xdusage/2.1-1/bin:/opt/packages/slurm/default/bin:/opt/packages/allocations:/opt/packages/interact/bin:/usr/lib64/ccache:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/puppet/bin:/bin:/sbin:/opt/puppetlabs/bin:/home/edisj/.local/bin:/home/edisj/bin
+++ _conda_hashr
+++ case "$_CONDA_SHELL_FLAVOR" in
+++ hash -r
++ testdir=/pylon5/mc4sb2p/edisj/Bridges/temp/12437864
++ export OMP_NUM_THREADS=1
++ OMP_NUM_THREADS=1
++ mpiexec -n 1 python -W ignore /pylon5/mc4sb2p/edisj/Bridges/benchmarks/in_memory_1/scripts/benchmark.py /pylon5/mc4sb2p/edisj/Bridges/temp/12437864/YiiP_system.pdb /pylon5/mc4sb2p/edisj/Bridges/temp/12437864/YiiP_system_9ns_center100x.h5md trial_1/1node_1
+Traceback (most recent call last):
+  File "/pylon5/mc4sb2p/edisj/Bridges/benchmarks/in_memory_1/scripts/benchmark.py", line 208, in <module>
+    times_array, rmsd_array = benchmark(topology, trajectory)
+  File "/pylon5/mc4sb2p/edisj/Bridges/benchmarks/in_memory_1/scripts/benchmark.py", line 48, in benchmark
+    u.transfer_to_memory(start=start, stop=stop, step=1)
+  File "/home/edisj/mdanalysis/package/MDAnalysis/core/universe.py", line 603, in transfer_to_memory
+    for i, ts in enumerate(ProgressBar(self.trajectory[start:stop:step],
+  File "/home/edisj/.conda/envs/MDA/lib/python3.8/site-packages/tqdm/std.py", line 1143, in __iter__
+    for obj in iterable:
+  File "/home/edisj/mdanalysis/package/MDAnalysis/coordinates/base.py", line 1474, in __next__
+    return self.next()
+  File "/home/edisj/mdanalysis/package/MDAnalysis/coordinates/base.py", line 1460, in next
+    ts = self._read_next_timestep()
+  File "/home/edisj/mdanalysis/package/MDAnalysis/coordinates/H5MD.py", line 790, in _read_next_timestep
+    return self._read_frame(self._frame + 1)
+  File "/home/edisj/mdanalysis/package/MDAnalysis/coordinates/H5MD.py", line 674, in _read_frame
+    _ = self._particle_group[name]['step'][frame]
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "/home/edisj/.conda/envs/MDA/lib/python3.8/site-packages/h5py/_hl/dataset.py", line 777, in __getitem__
+    selection = sel.select(self.shape, args, dataset=self)
+  File "/home/edisj/.conda/envs/MDA/lib/python3.8/site-packages/h5py/_hl/selections.py", line 82, in select
+    return selector.make_selection(args)
+  File "h5py/_selector.pyx", line 272, in h5py._selector.Selector.make_selection
+  File "h5py/_selector.pyx", line 151, in h5py._selector.Selector.apply_args
+IndexError: Index (90100) out of range for (0-90099)
+Exception ignored in: <function ReaderBase.__del__ at 0x7f535c0dc4c0>
+Traceback (most recent call last):
+  File "/home/edisj/mdanalysis/package/MDAnalysis/coordinates/base.py", line 2161, in __del__
+  File "/home/edisj/mdanalysis/package/MDAnalysis/coordinates/H5MD.py", line 794, in close
+  File "/home/edisj/.conda/envs/MDA/lib/python3.8/site-packages/h5py/_hl/files.py", line 445, in close
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 275, in h5py.h5f.get_obj_ids
+  File "h5py/h5i.pyx", line 46, in h5py.h5i.wrap_identifier
+ImportError: sys.meta_path is None, Python is likely shutting down
+Traceback (most recent call last):
+  File "h5py/_objects.pyx", line 199, in h5py._objects.ObjectID.__dealloc__
+RuntimeError: Can't decrement id ref count (can't close file, there are objects still open)
+Exception ignored in: 'h5py._objects.ObjectID.__dealloc__'
+Traceback (most recent call last):
+  File "h5py/_objects.pyx", line 199, in h5py._objects.ObjectID.__dealloc__
+RuntimeError: Can't decrement id ref count (can't close file, there are objects still open)
+*** The MPI_File_close() function was called after MPI_FINALIZE was invoked.
+*** This is disallowed by the MPI standard.
+*** Your MPI job will now abort.
+[r694.pvt.bridges.psc.edu:19106] Local abort after MPI_FINALIZE started completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+
+real	40m56.715s
+user	10m44.876s
+sys	7m23.371s
++ rm -r /pylon5/mc4sb2p/edisj/Bridges/temp/12437864

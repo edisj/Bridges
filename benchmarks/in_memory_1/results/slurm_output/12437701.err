@@ -1,0 +1,12 @@
++ sbatch --dependency=12437701 /pylon5/mc4sb2p/edisj/Bridges/benchmarks/in_memory_1/scripts/4node112.sh 3
++ TEST_TOP=/pylon5/mc4sb2p/edisj/Bridges/datafiles/YiiP_system.pdb
++ TEST_TRAJ=/pylon5/mc4sb2p/edisj/Bridges/datafiles/YiiP_system_9ns_center100x.h5md
++ testdir=/pylon5/mc4sb2p/edisj/Bridges/temp/12437701
++ mkdir -p /pylon5/mc4sb2p/edisj/Bridges/temp/12437701
++ cp /pylon5/mc4sb2p/edisj/Bridges/datafiles/YiiP_system.pdb /pylon5/mc4sb2p/edisj/Bridges/temp/12437701
+
+real	0m0.077s
+user	0m0.000s
+sys	0m0.023s
++ cp /pylon5/mc4sb2p/edisj/Bridges/datafiles/YiiP_system_9ns_center100x.h5md /pylon5/mc4sb2p/edisj/Bridges/temp/12437701
+slurmstepd: error: *** JOB 12437701 ON r568 CANCELLED AT 2020-12-30T08:14:59 ***
