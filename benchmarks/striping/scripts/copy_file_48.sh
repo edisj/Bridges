@@ -15,7 +15,7 @@ sbatch --dependency=$SLURM_JOB_ID $1 $2 $3
 TEST_TOP=$SCRATCH/Bridges/datafiles/YiiP_system.pdb
 TEST_TRAJ=$SCRATCH/Bridges/datafiles/YiiP_system_9ns_center100x.h5md
 
-testdir=$SCRATCH/Bridges/temp/stripe1000/$SLURM_JOB_ID
+testdir=$SCRATCH/Bridges/temp/stripe48/$SLURM_JOB_ID
 mkdir -p $testdir
 time cp $TEST_TOP $testdir
 time cp $TEST_TRAJ $testdir
