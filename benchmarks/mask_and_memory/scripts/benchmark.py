@@ -34,7 +34,7 @@ def benchmark(topology, trajectory):
 
             x_ref = CA.positions.copy()
             n_frames = len(u.trajectory)
-            if size == 28:
+            if (size == 1) or (size == 28):
                 n_frames = n_frames//2
             slices = make_balanced_slices(n_frames, size, start=0, stop=n_frames, step=1)
             # give each rank unique start and stop points
@@ -71,7 +71,7 @@ def benchmark(topology, trajectory):
         comm.Barrier()
     t_wait = wait_time.elapsed
 
-    if size == 28:
+    if (size == 1) or (size == 28):
         total_io = total_io*2
         total_rmsd = total_rmsd*2
 

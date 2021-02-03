@@ -1,0 +1,16 @@
++ sbatch --dependency=12712385 /pylon5/mc4sb2p/edisj/Bridges/benchmarks/mask_and_memory/scripts/1node1.sh trial_1 2
+Submitted batch job 12712428
++ TEST_TOP=/pylon5/mc4sb2p/edisj/Bridges/datafiles/YiiP_system.pdb
++ TEST_TRAJ=/pylon5/mc4sb2p/edisj/Bridges/datafiles/YiiP_system_9ns_center100x.h5md
++ testdir=/pylon5/mc4sb2p/edisj/Bridges/temp/12712385
++ mkdir -p /pylon5/mc4sb2p/edisj/Bridges/temp/12712385
++ cp /pylon5/mc4sb2p/edisj/Bridges/datafiles/YiiP_system.pdb /pylon5/mc4sb2p/edisj/Bridges/temp/12712385
+
+real	0m0.079s
+user	0m0.001s
+sys	0m0.020s
++ cp /pylon5/mc4sb2p/edisj/Bridges/datafiles/YiiP_system_9ns_center100x.h5md /pylon5/mc4sb2p/edisj/Bridges/temp/12712385
+
+real	16m48.475s
+user	0m0.073s
+sys	3m6.405s
