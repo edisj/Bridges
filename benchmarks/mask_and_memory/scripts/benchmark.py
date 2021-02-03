@@ -71,6 +71,10 @@ def benchmark(topology, trajectory):
         comm.Barrier()
     t_wait = wait_time.elapsed
 
+    if size == 28:
+        total_io = total_io*2
+        total_rmsd = total_rmsd*2
+
     # time how long it takes for proceses to gather the data
     with timeit() as comm_gather:
         rmsd_buffer = None
@@ -212,7 +216,7 @@ if __name__ == "__main__":
     times_array, rmsd_array = benchmark(topology, trajectory)
 
     if rank == 0:
-        data_path = '/pylon5/mc4sb2p/edisj/Bridges/benchmarks/in_memory_2/results/'
+        data_path = '/pylon5/mc4sb2p/edisj/Bridges/benchmarks/mask_and_memory/results/'
 
         os.makedirs(os.path.join(data_path, args.directory_name + '/'), exist_ok=True)
 

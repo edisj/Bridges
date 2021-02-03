@@ -69,6 +69,10 @@ def benchmark(topology, trajectory):
         comm.Barrier()
     t_wait = wait_time.elapsed
 
+    if size == 28:
+        total_io = total_io*2
+        total_rmsd = total_rmsd*2
+
     # time how long it takes for proceses to gather the data
     with timeit() as comm_gather:
         rmsd_buffer = None
